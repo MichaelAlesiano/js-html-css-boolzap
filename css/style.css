@@ -7,10 +7,17 @@
 body {
   width: 100%;
   height: 100vh;
-  background-image: linear-gradient(to bottom,#00af9c 0px, #00af9c 15vh, white 15vh, white 100%);
+  background-image: linear-gradient(to bottom,#009688 0px, #009688 15vh, #dcdbd2 15vh, #dcdbd2 100%);
   display: flex;
   justify-content: center;
   overflow: hidden;
+  font-family: 'Roboto', sans-serif;
+}
+
+i {
+  font-size: 25px;
+  color: grey;
+  cursor: pointer;
 }
 
 .main-central {
@@ -25,49 +32,136 @@ body {
 .left-main {
   height: 100%;
   width: 550px;
-  background-color: yellow;
 }
 
 .left-header {
   height: 70px;
   width: 100%;
-  background-color: blue;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding: 5px 10px;
+  line-height: 70px;
+  background-color: #eaeaea;
 }
 
 .box-avatar {
-  height: 20px;
-  width: 20px;
+  display: flex;
+  align-items: center;
+}
+
+.box-avatar span {
+  margin-left: 10px;
+  font-size: 20px;
+}
+
+.box-avatar img{
+  width: 60px;
+  border-radius: 50%;
+}
+
+.box-icons i {
+  margin-left: 20px;
+}
+
+.box-icons i:last-child {
+  margin-right: 12px;
 }
 
 .left-disclaimer {
   height: 100px;
   width: 100%;
-  background-color: brown;
+  background-color: #8edafc;
+  display: flex;
+  align-items: center;
+}
+
+.box-icon-disclaimer {
+  padding: 5px 10px;
+}
+
+.box-icon-disclaimer i {
+  font-size: 25px;
+  color: #8edafc;
+  padding: 14px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+.box-text-disclaimer {
+  margin-left: 2px;
+  line-height: 1.4;
+}
+
+.box-text-disclaimer span {
+  text-decoration: underline;
+  cursor: pointer;
+  color: grey;
 }
 
 .left-searchbar {
-  height: 60px;
   width: 100%;
-  background-color: red;
+  height: 60px;
+  background-color: #eaeaea;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+}
+
+.left-searchbar input {
+  width: 96%;
+  height: 60%;
+  padding-left: 40px;
+  border: none;
+  border-radius: 20px;
+  outline: none;
+}
+
+.left-searchbar i {
+  color: lightgrey;
+  cursor: pointer;
+  position: absolute;
+  left: 22px;
+  font-size: 20px;
 }
 
 .left-contacts {
   height: calc(100% - 60px - 100px - 70px);
   width: 100%;
-  background-color: purple;
+  background-color: white;
+  overflow-y: auto;
+}
+
+.box-contact {
+  padding: 8px 10px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #eaeaea;
+}
+
+.box-contact span {
+  margin-bottom: 22px;
+  margin-left: 14px;
+  font-size: 20px;
+}
+
+.box-contact img{
+  width: 60px;
+  border-radius: 50%;
 }
 
 /* Parte destra */
 .right-main {
   height: 100%;
   width: 950px;
-  background-color: pink;
 }
 
 .right-header {
   height: 70px;
   width: 100%;
-  background-color: green;
+  background-color: #eaeaea;
+  border-left: 1px solid lightgrey;
 }
 
 .right-chat {
