@@ -10,6 +10,7 @@
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.2/css/all.min.css" integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w==" crossorigin="anonymous" />
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
 </head>
 <body>
 
@@ -24,9 +25,9 @@
         <!-- Inizio header parte sinistra -->
         <div class="left-header">
 
-          <div class="box-avatar">
-            <img src="img/avatar_1.jpg" alt="">
-            <span>Michael Alesiano</span>
+          <div class="box-avatar" v-for = "myAcc in account">
+            <img :src="myAcc.avatar" alt="">
+            <span>{{myAcc.name}}</span>
           </div>
 
           <div class="box-icons-left">
@@ -65,54 +66,9 @@
         <!-- Inizio parte contatti sinistra -->
         <div class="left-contacts">
 
-          <div class="box-contact">
-            <img src="img/avatar_2.jpg" alt="">
-            <span>Giorgio</span>
-          </div>
-
-          <div class="box-contact">
-            <img src="img/avatar_2.jpg" alt="">
-            <span>Giorgio</span>
-          </div>
-
-          <div class="box-contact">
-            <img src="img/avatar_2.jpg" alt="">
-            <span>Giorgio</span>
-          </div>
-
-          <div class="box-contact">
-            <img src="img/avatar_2.jpg" alt="">
-            <span>Giorgio</span>
-          </div>
-
-          <div class="box-contact">
-            <img src="img/avatar_2.jpg" alt="">
-            <span>Giorgio</span>
-          </div>
-
-          <div class="box-contact">
-            <img src="img/avatar_2.jpg" alt="">
-            <span>Giorgio</span>
-          </div>
-
-          <div class="box-contact">
-            <img src="img/avatar_2.jpg" alt="">
-            <span>Giorgio</span>
-          </div>
-
-          <div class="box-contact">
-            <img src="img/avatar_2.jpg" alt="">
-            <span>Giorgio</span>
-          </div>
-
-          <div class="box-contact">
-            <img src="img/avatar_2.jpg" alt="">
-            <span>Giorgio</span>
-          </div>
-
-          <div class="box-contact">
-            <img src="img/avatar_2.jpg" alt="">
-            <span>Giorgio</span>
+          <div class="box-contact" v-for = "contact in contacts">
+            <img :src="contact.avatar" alt="">
+            <span>{{contact.name}}</span>
           </div>
 
         </div>
@@ -129,10 +85,10 @@
 
           <div class="box-contact-header">
 
-            <img src="img/avatar_2.jpg" alt="">
+            <img src="img/michele.jpg" alt="">
 
             <div class="box-info-contact">
-              <p>Giorgio</p>
+              <p>Michele</p>
               <span>Ultimo accesso oggi alle</span>
             </div>
 
