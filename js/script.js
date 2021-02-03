@@ -199,10 +199,10 @@ var app = new Vue ({
     ],
 
     methods : {
-      changeChat (index) {
+      changeChat(index) {
         this.counter = index;
       }
-    }
+    },
 
   }
 });
