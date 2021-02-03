@@ -2,6 +2,8 @@ var app = new Vue ({
   el : '#app',
   data : {
 
+    counter : 0 ,
+
     account: [{
       name: 'Michael Alesiano',
       avatar: 'img/io.jpg',
@@ -194,7 +196,13 @@ var app = new Vue ({
         ],
       }
 
-    ]
+    ],
+
+    methods : {
+      changeChat (index) {
+        this.counter = index;
+      }
+    }
 
   }
 });

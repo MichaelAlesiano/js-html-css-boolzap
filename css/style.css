@@ -208,6 +208,32 @@ i {
   overflow-y: auto;
 }
 
+.container-chat {
+  margin: 20px 40px;
+}
+
+.message {
+  margin: 8px 0;
+  padding: 15px 15px 20px 15px;
+  min-width: 40%;
+  max-width: 60%;
+  border-radius: 10px;
+  font-size: 20px;
+  word-break: break-word;
+}
+
+.sent {
+  background-color: #d5f9ba;
+  float: right;
+  clear: both;
+}
+
+.received {
+  background-color: white;
+  float: left;
+  clear: both;
+}
+
 .right-footer {
   height: 70px;
   width: 100%;
