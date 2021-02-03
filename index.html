@@ -11,6 +11,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/vue@2"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js" integrity="sha512-qTXRIMyZIFb8iQcfjXWCO8+M5Tbc38Qi5WzdPOYZHIlZpzBHG3L3by84BBBOiRGiEb7KKtAOAs5qYdUiZiQNNQ==" crossorigin="anonymous"></script>
 </head>
 <body>
 
@@ -89,7 +90,7 @@
 
             <div class="box-info-contact">
               <p>{{contacts[counter].name}}</p>
-              <span>Ultimo accesso oggi alle</span>
+              <span>Ultimo accesso oggi alle {{online}}</span>
             </div>
 
           </div>
@@ -110,11 +111,8 @@
 
           <div class="container-chat">
 
-            <div class="message sent">
-              Ciao come va? Ciao come va? Ciao come va? Ciao come va? Ciao come va?
-            </div>
-            <div class="message received">
-              Ciao come va? Ciao come va? Ciao come va? Ciao come va? Ciao come va?
+            <div class="message" :class="messaggio.status" v-for = "(messaggio, index) in contacts[counter].messages" >
+              {{messaggio.text}}
             </div>
 
           </div>

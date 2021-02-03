@@ -2,7 +2,9 @@ var app = new Vue ({
   el : '#app',
   data : {
 
-    counter : 0 ,
+    counter : 0,
+
+    online: moment().format('HH:mm'),
 
     account: [{
       name: 'Michael Alesiano',
@@ -195,14 +197,12 @@ var app = new Vue ({
           }
         ],
       }
-
     ],
+  },
 
-    methods : {
-      changeChat(index) {
-        this.counter = index;
-      }
-    },
-
+  methods : {
+    changeChat (index) {
+      this.counter = index;
+    }
   }
 });
