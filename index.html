@@ -90,7 +90,7 @@
 
             <div class="box-info-contact">
               <p>{{contacts[counter].name}}</p>
-              <span>Ultimo accesso oggi alle {{online}}</span>
+              <span>{{contacts[counter].online}}</span>
             </div>
 
           </div>
@@ -112,7 +112,8 @@
           <div class="container-chat">
 
             <div class="message" :class="messaggio.status" v-for = "(messaggio, index) in contacts[counter].messages" >
-              {{messaggio.text}}
+              <p>{{messaggio.text}}</p>
+              <span>{{messaggio.date}}</span>
             </div>
 
           </div>
@@ -131,7 +132,7 @@
 
           <div class="box-textarea-footer">
 
-            <input type="text" placeholder="Scrivi un messaggio">
+            <input type="text" placeholder="Scrivi un messaggio" v-model = "newMessage" @keyup.enter="pushChat">
 
           </div>
 
